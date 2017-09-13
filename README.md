@@ -1,6 +1,6 @@
 This is the source code webpage of our latest work on dense mapping. We will release our open-source implementations after our paper is accepted.
 
-The high resolution video of our submitted paper is: https://1drv.ms/v/s!ApzRxvwAxXqQmguH6-iBshCx8W_J
+The high resolution video of our submitted paper is: https://1drv.ms/v/s!ApzRxvwAxXqQmguH6-iBshCx8W_J and https://1drv.ms/v/s!ApzRxvwAxXqQmk-uQ3JGZSYcnEdn
 
 For more questions, please contact ylingaa at connect dot ust dot hk .
 
