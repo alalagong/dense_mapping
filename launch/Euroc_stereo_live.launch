@@ -1,0 +1,14 @@
+<launch>
+ 	<node pkg="graph_map" type="ros_stereo_live" name="graph_map" args="$(find graph_map)/Vocabulary/ORBvoc.bin $(find graph_map)/config/EuRoC_stereo_viconRoom.yaml" output="screen">
+   </node>
+
+  <!-- Bag -->
+  <node name="rosbag" 
+        pkg="rosbag" 
+        type="play" 
+        respawn="false"
+        args="-s 1 -r 1.0 /home/ygling2008/testdata/euroc_dataset/V1_02_medium/V1_02_medium.bag">
+  </node> 
+
+
+</launch>

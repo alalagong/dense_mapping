@@ -1,0 +1,5 @@
+<launch>
+ 	<node pkg="graph_map" type="ros_stereo_offline" name="graph_map" args="$(find graph_map)/Vocabulary/ORBvoc.bin $(find graph_map)/config/EuRoC_stereo_viconRoom.yaml" output="screen">
+   </node>
+
+</launch>

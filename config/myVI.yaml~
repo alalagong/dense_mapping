@@ -1,0 +1,169 @@
+%YAML:1.0
+
+# Tracker
+equalized: 1
+MIN_DIST: 20
+F_THRESHOLD: 3.0
+SHOW_TRACK: 1
+MIN_PARALLAX: 25.0
+FREQ: 25
+skipFrames: 2
+TrackerTotalTime: 100.0
+
+# Loop
+loop_MAX_FEATURES: 300
+
+# SGBM
+useCUDA: 1
+upMargin: 0
+# upMargin: 50
+downMargin: 0
+# downMargin: 60
+leftMargin: 128
+# leftMargin: 128
+rightMargin: 16
+# rightMargin: 20
+maxDisparity: 64
+SADWindowSize: 11
+
+# Debug Info
+displayViewer: 1
+
+# Mesh parameters
+enableMeshing: 0
+updateMeshFlag: 1
+cubicBound: 22.0
+updateNonKF: 0
+cvWaitTime: 1
+renderingK: 150
+useColor: 1
+useCarving: 1
+nearPlaneDist: 0.1
+farPlaneDist: 20.0
+chunkSizeX: 4
+chunkSizeY: 4
+chunkSizeZ: 4
+voxelResolution: 0.2
+weight: 1
+carvingDist: 1
+truncationDistConst: 0.001504
+truncationDistLinear: 0.00152
+truncationDistQuad: 0.0019
+truncationDistScale: 4.0
+downSampleTimes: 0
+updateMeshInterval: 0
+delayLoopTime: 0
+displayImmediateResult: 1
+covisiblityTh: 10
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 451.234392
+Camera.fy: 451.234392
+Camera.cx: 371.681286
+Camera.cy: 221.697613
+
+Camera.width: 752
+Camera.height: 480
+
+# Camera frames per second 
+Camera.fps: 25.0
+
+# stereo baseline times fx
+Camera.bf: 49.553770
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+ThDepth: 35
+
+#--------------------------------------------------------------------------------------------
+# Stereo Rectification. Only if you need to pre-rectify the images.
+# Camera.fx, .fy, etc must be the same as in LEFT.P
+#--------------------------------------------------------------------------------------------
+LEFT.height: 480
+LEFT.width: 752
+LEFT.D: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data:[-0.294690, 0.086718, 0.000120, -0.000069, 0.000000]
+LEFT.K: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [468.088928, 0.000000, 383.336433, 0.000000, 467.978207, 214.091417, 0.000000, 0.000000, 1.000000]
+LEFT.R:  !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [1.000000, 0.000117, 0.000580, -0.000117, 0.999999, -0.001242, -0.000581, 0.001241, 0.999999]
+LEFT.P:  !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: d
+   data: [451.234392, 0.000000, 371.681286, 0.000000, 0.000000, 451.234392, 221.697613, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000]
+
+RIGHT.height: 480
+RIGHT.width: 752
+RIGHT.D: !!opencv-matrix
+   rows: 1
+   cols: 5
+   dt: d
+   data:[-0.295660, 0.088802, -0.000160, -0.000168, 0.000000]
+RIGHT.K: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [469.371666, 0.000000, 351.581229, 0.000000, 469.334624, 229.010140, 0.000000, 0.000000, 1.000000]
+RIGHT.R:  !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [0.999916, 0.001351, -0.012881, -0.001335, 0.999998, 0.001250, 0.012882, -0.001233, 0.999916]
+RIGHT.P:  !!opencv-matrix
+   rows: 3
+   cols: 4
+   dt: d
+   data: [451.234392, 0.000000, 371.681286, -49.553770, 0.000000, 451.234392, 221.697613, 0.000000, 0.000000, 0.000000, 1.000000, 0.000000]
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 12
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.4
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.MeshLineWidth: 0.8
+Viewer.PointSize:2
+Viewer.CameraSize: 1.6
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
+Viewer.TopDownZ: -50
+

@@ -1,0 +1,5 @@
+<launch>
+ 	<node pkg="lt_slam" type="lt_stereo_euroc" name="lt_slam" args="$(find lt_slam)/Vocabulary/ORBvoc.bin $(find lt_slam)/config/EuRoC_stereo_viconRoom.yaml" output="screen">
+   </node>
+
+</launch>

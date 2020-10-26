@@ -1,0 +1,135 @@
+%YAML:1.0
+
+# Bag Info
+preRectified: 1
+startTime: 1
+bagPath: "/media/rolandling/DATA/newCollege/"
+listPath: "/media/rolandling/DATA/list.txt"
+flipStereo: 0
+
+# Tracker
+equalized: 1
+MIN_DIST: 20
+F_THRESHOLD: 2.0
+SHOW_TRACK: 1
+MIN_PARALLAX: 20.0
+FREQ: 20
+skipFrames: 1
+TrackerTotalTime: 50
+BATime: 0.15
+
+# Loop
+loop_MAX_FEATURES: 300
+
+# SGBM
+useCUDA: 1
+upMargin: 0
+# upMargin: 50
+downMargin: 0
+# downMargin: 60
+leftMargin: 128
+# leftMargin: 128
+rightMargin: 16
+# rightMargin: 20
+maxDisparity: 64
+SADWindowSize: 11
+
+
+# Debug Info
+displayViewer: 1
+followPose: 0
+memoryLimit: 10000
+loopStop: 0
+
+# Mesh parameters
+enableMeshing: 1  
+updateMeshFlag: 0
+cubicBound: 10.0
+updateNonKF: 0
+cvWaitTime: 1
+renderingK: 200
+useColor: 1
+useCarving: 1
+nearPlaneDist: 0.1
+farPlaneDist: 8.0
+chunkSizeX: 4
+chunkSizeY: 4
+chunkSizeZ: 4
+voxelResolution: 0.2
+weight: 1
+carvingDist: 0.05
+truncationDistConst: 0.001504
+truncationDistLinear: 0.00152
+truncationDistQuad: 0.0019
+truncationDistScale: 8.0
+downSampleTimes: 0
+updateMeshInterval: 0
+delayLoopTime: 0
+displayImmediateResult: 1
+covisiblityTh: 10
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 389.956085
+Camera.fy: 389.956085
+Camera.cx: 254.903519
+Camera.cy: 201.899490
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+
+# Camera frames per second 
+Camera.fps: 100
+
+# stereo baseline times fx
+Camera.bf: 46.7966799804
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+ThDepth: 40
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 800
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.2
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.MeshLineWidth: 0.8
+Viewer.PointSize:2
+Viewer.CameraSize: 0.8
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: 0.5
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
+Viewer.TopDownZ: -50
+
+
+
